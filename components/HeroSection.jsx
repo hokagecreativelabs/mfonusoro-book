@@ -26,7 +26,7 @@ export default function Hero() {
       <motion.div 
         initial={{ opacity: 0, x: -50 }} 
         animate={{ opacity: 1, x: 0 }} 
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.8 }}
         className="w-[317px] h-[471px] md:w-[576px] md:h-[90vh] flex items-center justify-center md:pt-0 pt-10 relative"
       >
         {/* Slide Image */}
