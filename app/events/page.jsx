@@ -2,9 +2,9 @@
 import { useState, useMemo } from "react";
 
 const events = [
-  { title: "Book Launch", date: "Feb 23, 2025", image: "/event.png" },
-  { title: "Live Book Launch Webinar", date: "Mar 3, 2025", image: "/event1.png" },
-  { title: "In-Person Book Signing", date: "Mar 12, 2025", image: "/event2.png" },
+  { title: "Book Launch", date: "Feb 23, 2025", image: "/event.webp" },
+  { title: "Live Book Launch Webinar", date: "Mar 3, 2025", image: "/event1.webp" },
+  { title: "In-Person Book Signing", date: "Mar 12, 2025", image: "/event2.webp" },
 ];
 
 const EventsPage = () => {

@@ -1,26 +1,39 @@
-"use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import React from "react";
+import "./BookLoader.css";
 
-const pageVariants = {
-  initial: { rotateY: 90, opacity: 0 },
-  enter: { rotateY: 0, opacity: 1, transition: { duration: 0.6 } },
-  exit: { rotateY: -90, opacity: 0, transition: { duration: 0.6 } },
+const BookLoader = () => {
+  return (
+    <>
+
+      <div className="book">
+        <div className="inner">
+          <div className="left"></div>
+          <div className="middle"></div>
+          <div className="right"></div>
+        </div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div><a className="dribbble" href="https://dribbble.com/shots/7199149-Book-Loader" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png"/></a>
+    </>
+  );
 };
 
-export default function PageFlipTransition({ children }) {
-  const [showPage, setShowPage] = useState(true);
-
-  return (
-    <motion.div
-      key={showPage ? "page1" : "page2"}
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      variants={pageVariants}
-      className="w-full h-full bg-white shadow-xl rounded-lg"
-    >
-      {children}
-    </motion.div>
-  );
-}
+export default BookLoader;

@@ -1,12 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
+const LazyImage = lazy(() => import("next/image")); // Lazy-load Image component
 
 export default function Hero() {
   const slides = [
     "/mfon-usoro-book-cover.webp",
-    "/mfon-usoro-book-cover-2.webp",
+    "/mfon-usoro-book-cover.webp",
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -28,16 +29,18 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="w-[317px] h-[471px] md:w-[376px] md:h-[70vh] flex items-center justify-center relative overflow-hidden"
       >
-        {/* Display Only Active Slide */}
-        <Image
-          key={activeSlide} // Ensure key updates with state
-          src={slides[activeSlide]}
-          alt={`Book Cover ${activeSlide + 1}`}
-          width={500}
-          height={571}
-          className="absolute inset-0 object-contain transition-opacity duration-700"
-          priority // Load faster
-        />
+        {/* Lazy Load Image */}
+        <Suspense fallback={<div className="w-full h-full bg-gray-200" />}>
+          <LazyImage
+            key={activeSlide} // Ensure key updates with state
+            src={slides[activeSlide]}
+            alt={`Book Cover ${activeSlide + 1}`}
+            width={500}
+            height={571}
+            className="absolute inset-0 object-contain transition-opacity duration-700"
+            priority // Preload images
+          />
+        </Suspense>
 
         {/* Navigation Buttons */}
         <button

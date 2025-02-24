@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
-import "./globals.css";
 import Footer from "@/components/Footer";
+import PageWrapper from "@/components/PageWrapper";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,13 +12,36 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Preload fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100..900&family=Roboto:wght@100..900&display=swap"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100..900&family=Roboto:wght@100..900&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+
+        {/* Preload global styles */}
+        <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="/globals.css" /></noscript>
+
+        {/* Inline critical CSS */}
+        <style>
+          {`
+            body { font-family: 'Roboto', sans-serif; }
+          `}
+        </style>
       </head>
       <body>
         <Navbar />
-        {children}
+        <PageWrapper>{children}</PageWrapper>
         <Footer />
       </body>
     </html>

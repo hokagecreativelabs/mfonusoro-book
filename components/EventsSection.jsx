@@ -2,17 +2,17 @@ const events = [
   {
     title: "Book Launch",
     date: "Mar 1, 2025",
-    image: "/event.png",
+    image: "/event.webp",
   },
   {
     title: "Live Book Launch Webinar",
     date: "Mar 3, 2025",
-    image: "/event1.png",
+    image: "/event1.webp",
   },
   {
     title: "In-Person Book Signing",
     date: "Feb 24, 2025",
-    image: "/event2.png",
+    image: "/event2.webp",
   },
 ];
 
