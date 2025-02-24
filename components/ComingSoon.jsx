@@ -7,7 +7,7 @@ const ComingSoon = () => {
         <div
           className="w-full h-[00px] md:w-1/2 flex items-center justify-center text-white text-4xl font-serif font-bold bg-cover bg-center"
           style={{
-            backgroundImage: "url('/coming.png')",
+            backgroundImage: "url('/coming.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

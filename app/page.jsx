@@ -19,7 +19,7 @@ export default function Home() {
       <div className="mb-[-100px]">
         <TestimonialSlider />
       </div>
-      <div className="mb-[-100px]">
+      <div className="mb-[-100px] mt-[50px] md:mt-20">
         <ComingSoon />
       </div>
       <div className="mt-[350px] md:mt-28 mb-[-100px]">
