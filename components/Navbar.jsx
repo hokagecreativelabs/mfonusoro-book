@@ -55,7 +55,7 @@ export default function Navbar() {
           ))}
         </nav>
         <Link
-          href="/more-info"
+          href="/books/international-trade-carriage"
           className="bg-[#FFD4A3] text-[#5C3100] px-[32px] py-[21px] text-[14px] font-medium leading-[128%] tracking-tight"
         >
           FIND OUT MORE
@@ -91,7 +91,7 @@ export default function Navbar() {
           ))}
         </nav>
         <Link
-          href="/more-info"
+          href="/books/international-trade-carriage"
           className="bg-[#FFD4A3] text-[#5C3100] px-[32px] py-[20px] text-[14px] font-medium leading-[128%] w-full text-center"
           onClick={() => setIsOpen(false)}
         >

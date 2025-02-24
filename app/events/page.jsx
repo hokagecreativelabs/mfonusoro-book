@@ -3,9 +3,21 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 
 const events = [
-  { title: "Book Launch", date: "Feb 23, 2025", image: "/event.webp" },
-  { title: "Live Book Launch Webinar", date: "Mar 3, 2025", image: "/event1.webp" },
-  { title: "In-Person Book Signing", date: "Mar 12, 2025", image: "/event2.webp" },
+  {
+    title: "Book Launch",
+    date: "Mar 1, 2025",
+    image: "/event.webp",
+  },
+  {
+    title: "Live Book Launch Webinar",
+    date: "Mar 3, 2025",
+    image: "/event1.webp",
+  },
+  {
+    title: "In-Person Book Signing",
+    date: "Feb 24, 2025",
+    image: "/event2.webp",
+  },
 ];
 
 const EventsPage = () => {

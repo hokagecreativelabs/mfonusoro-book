@@ -24,7 +24,7 @@ export default function About() {
           Mfon, an internationally acclaimed expert in transport laws and project finance, is the Managing Partner of the firm. Her deep knowledge of transaction and commercial practice makes her highly recommended by both domestic and international organisations. She leads the firm’s team in maritime, aviation, project finance, and energy matters actively participating in complex domestic and cross-border transactions. Under her supervision, the firm’s transaction team provides first-in-class legal advisory services to satisfied clients in the private and public sectors cutting across diverse areas.
         </p>
         <button className="bg-[#FFD4A3] text-[#5C3100] text-[14px] font-semibold leading-[128%] px-[24px] py-[32px] mt-8 hover:shadow-lg transition-all">
-          FIND OUT MORE
+          <a href="/books/international-trade-carriage">FIND OUT MORE</a>
         </button>
       </motion.div>
 

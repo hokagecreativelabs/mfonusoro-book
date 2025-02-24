@@ -1,28 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// Sample book data with slug
 const books = [
   {
     title: "International Trade and Carriage of Goods by Sea",
     images: ["/mfon-usoro-book-cover.webp", "/book-cover-2.webp"],
     category: "book",
-  },
-  {
-    title: "Maritime Law Essentials",
-    images: ["/mfon-usoro-book-cover.webp", "/book-cover-3.webp"],
-    category: "book",
-  },
-  {
-    title: "Shipping Regulations 2024",
-    images: ["/mfon-usoro-book-cover.webp", "/book-cover-4.webp"],
-    category: "presentation",
-  },
+    slug: "international-trade-carriage",
+  }
 ];
 
 const categories = [
@@ -82,37 +75,32 @@ const BooksPage = () => {
         </div>
       </div>
 
-      {/* Books Grid or No Results */}
+      {/* Books Grid */}
       {filteredBooks.length > 0 ? (
         <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 md:px-16">
           {filteredBooks.map((book, index) => (
-            <div
-              key={index}
-              className="border border-gray-300 rounded-lg p-6 shadow-md text-center bg-white"
-            >
-              {/* Swiper for multiple images */}
-              <Swiper
-                spaceBetween={10}
-                slidesPerView={1}
-                pagination={{ clickable: true }} // Dots pagination
-                autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay settings
-                modules={[Pagination, Autoplay]}
-                className="w-full max-w-xs mx-auto"
-              >
-                {book.images.map((image, imgIndex) => (
-                  <SwiperSlide key={imgIndex}>
-                    <img
-                      src={image}
-                      alt={`Cover of ${book.title}`}
-                      className="w-full rounded-md"
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <Link key={index} href={`/books/${book.slug}`}>
+              <div className="border border-gray-300 rounded-lg p-6 shadow-md text-center bg-white cursor-pointer hover:shadow-lg transition">
+                {/* Swiper for multiple images */}
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  pagination={{ clickable: true }}
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  modules={[Pagination, Autoplay]}
+                  className="w-full max-w-xs mx-auto"
+                >
+                  {book.images.map((image, imgIndex) => (
+                    <SwiperSlide key={imgIndex}>
+                      <img src={image} alt={book.title} className="w-full rounded-md" />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
 
-              {/* Book Title */}
-              <h2 className="mt-4 text-lg text-black font-medium">{book.title}</h2>
-            </div>
+                {/* Book Title */}
+                <h2 className="mt-4 text-lg text-black font-medium">{book.title}</h2>
+              </div>
+            </Link>
           ))}
         </section>
       ) : (

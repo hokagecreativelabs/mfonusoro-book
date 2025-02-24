@@ -80,7 +80,7 @@ export default function Hero() {
           industry.
         </p>
         <button className="bg-[#FFD4A3] text-[#5C3100] text-[14px] font-semibold leading-[128%] px-[24px] py-[32px] mt-8 hover:shadow-lg transition-all">
-          FIND OUT MORE
+          <a href="/books/international-trade-carriage">FIND OUT MORE</a>
         </button>
       </motion.div>
     </section>
