@@ -11,13 +11,13 @@ export default function Home() {
       <div>
         <HeroSection />
       </div>
-      <div className="mt-[450px] md:mt-20">
+      <div className="mt-[500px] md:mt-20 mb-[-100px]">
         <AboutSection />
       </div>
-      <div>    
+      <div className="mb-[-100px]">    
         <TestimonialSlider />
       </div>
-      <div>
+      <div className="mb-[-100px]">
         <ComingSoon />
       </div>
       <div className="mt-[450px] md:mt-28">

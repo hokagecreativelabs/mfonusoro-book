@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 const books = [
   {
-    title: "Carriage of Goods by Sea",
+    title: "International Trade and Carriage of Goods by Sea",
     images: ["/mfon-usoro-book-cover.webp", "/book-cover-2.webp"],
     category: "book",
   },
@@ -28,6 +28,7 @@ const books = [
 const categories = [
   { label: "All", value: "all" },
   { label: "Books", value: "book" },
+  { label: "Articles", value: "article" },
   { label: "Presentations", value: "presentation" },
 ];
 
@@ -43,7 +44,7 @@ const BooksPage = () => {
   );
 
   return (
-    <main className="mt-[64px] min-h-screen bg-gray-50">
+    <main className="mt-[64px] min-h-screen">
       {/* Header */}
       <header className="text-center py-12">
         <h1 className="text-4xl font-semibold text-[#1B1816]">Books</h1>
