@@ -17,10 +17,10 @@ export default function Home() {
       <div className="md:mt-52 mb-[-100px]">    
         <TestimonialSlider />
       </div>
-      <div className="mt-[100px] mb-[-100px]">
-        <ComingSoon />
-      </div>
-      <div className="mt-[350px] md:mt-48 mb-[-100px]">
+        <div className="mt-[100px] mb-[-100px]">
+          <ComingSoon />
+        </div>
+      <div className="mt-[150px] md:mt-48 mb-[-100px]">
         <EventsSection />
       </div>
     </div>
