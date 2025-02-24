@@ -6,7 +6,7 @@ const About = () => {
 
       {/* Image on Top */}
       <img
-        src="/mfon-ekong-usoro.png" // Replace with actual image path
+        src="/mfon-ekong-usoro.webp" // Replace with actual image path
         alt="Mfon Ekong Usoro"
         className="w-[760px] h-[400px] object-cover rounded-lg shadow-lg mx-auto"
       />

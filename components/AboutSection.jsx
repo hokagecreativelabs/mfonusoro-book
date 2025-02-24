@@ -37,7 +37,7 @@ export default function About() {
       >
         <Suspense fallback={<div className="w-[750px] h-[500px] bg-gray-200" />}>
           <Image
-            src="/mfon-ekong-usoro.png"
+            src="/mfon-ekong-usoro.webp"
             alt="Mfon Usoro"
             width={750}
             height={600}
