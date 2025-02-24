@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
+import Image from "next/image";
 
 const events = [
   { title: "Book Launch", date: "Feb 23, 2025", image: "/event.webp" },
@@ -88,7 +89,14 @@ const EventsPage = () => {
               return (
                 <div key={index} className="overflow-hidden bg-white shadow-md rounded-lg">
                   {/* Event Image */}
-                  <img src={event.image} alt={event.title} className="w-full h-[300px] object-cover" />
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    width={600} // Adjust width as needed
+                    height={400} // Adjust height as needed
+                    className="w-full h-[300px] object-cover"
+                    priority={index === 0} // Load first image with priority
+                  />
 
                   {/* Event Details */}
                   <div className="p-4">

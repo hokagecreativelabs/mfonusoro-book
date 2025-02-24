@@ -28,7 +28,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <section className="bg-[#FEFBF6] pt-16 px-6 mt-28 h-[500px]">
+    <section className="bg-[#FEFBF6] pt-24 px-6 mt-28 h-[500px]">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -44,7 +44,7 @@ const TestimonialSlider = () => {
               </p>
             </div>
             <div className="mt-6 text-[#3D3C42]">
-              <h4 className="font-bold">{testimonial.name}</h4>
+              <p className="font-bold">{testimonial.name}</p>
               <p className="text-sm mb-8">{testimonial.role}</p>
             </div>
           </SwiperSlide>

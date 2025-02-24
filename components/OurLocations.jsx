@@ -1,6 +1,6 @@
 const Locations = () => {
     return (
-      <section className="bg-[#FEF9F5] py-10 px-6 md:px-12">
+      <section className="bg-[#FEF9F5] pt-[-100px] px-6 md:px-12">
         {/* Section Label */}
         <div className="flex items-center space-x-2 mb-[20px]">
           <span className="w-2 h-2 bg-[#FFA947] rounded-full mt-4"></span>
